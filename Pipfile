@@ -9,9 +9,17 @@ environs = "*"
 sanic-envconfig = "*"
 sanic = "*"
 databases = {extras = ["postgresql"], version = "*"}
+project = {editable = true, path = "."}
 ipython = "*"
+alembic = "*"
+psycopg2-binary = "*"
+psycopg2 = "*"
+asyncpg = "*"
+python-dotenv = "*"
 
 [dev-packages]
+pytest = "*"
+ipdb = "*"
 
 [requires]
 python_version = "3.8"
