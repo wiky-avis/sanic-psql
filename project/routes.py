@@ -3,6 +3,12 @@ from project.tables import Book
 
 
 def setup_routes(app):
+    @app.route('/')
+    async def hello_world(request):
+        return json({'hello': 'Hello world!'})
+
+
+def setup_routes(app):
     @app.route('/books')
     async def book_list(request):
         query = Book.select()

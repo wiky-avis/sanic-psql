@@ -12,7 +12,7 @@ app = Sanic(__name__)
 
 
 def setup_database():
-    app.db = Database(os.getenv('DB_URL'))
+    app.db = Database(os.getenv('postgresql://sanic:sanic@localhost:5432'))
 
     @app.listener('after_server_start')
     async def connect_to_db(*args, **kwargs):
